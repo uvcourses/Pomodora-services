@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class PomodoraServicesApplication {
 
 	public static void main(String[] args) {
+	
 		SpringApplication.run(PomodoraServicesApplication.class, args);
 	}
 }

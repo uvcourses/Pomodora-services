@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: yuvarajsakthivel
+Build-Jdk: 10.0.2
+Implementation-Title: Pomodora-services
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.pomodora.services
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/Pomodora-services
+Created-By: Maven Integration for Eclipse
+
