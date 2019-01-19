@@ -20,47 +20,32 @@ import org.slf4j.LoggerFactory;
 
 @RestController
 @RequestMapping(value = "/")
-public class SignupController {
-	
+public class PomodoraController {
+
 	private final SignupRepository signupRepository;
 
-	
-	public SignupController(SignupRepository signupRepository) {
-		this.signupRepository=signupRepository;
-		
-	
-	}
-	
-	@RequestMapping(value = "", method = RequestMethod.GET)
-	public List<SignupFormBean> getAllUsers() {
-		//LOG.info("Getting all users.");
-		return signupRepository.findAll();
-	}
-	
-	
-	@RequestMapping(value = "/{userId}", method = RequestMethod.GET)
-	public Optional<SignupFormBean> getUser(@PathVariable String userId) {
-		//LOG.info("Getting user with ID: {}.", userId);
-		return signupRepository.findById(userId);
-	}
-	@CrossOrigin(origins="http://localhost:8080")
-	@RequestMapping(value = "/create", method = RequestMethod.POST)
-	public SignupFormBean addNewUsers(@RequestBody SignupFormBean user) {
-		//LOG.info("Saving user.");
-		
-		return signupRepository.save(user);
-	}
-	
-//	@RequestMapping(value = "/settings/{userId}", method = RequestMethod.GET)
-//	public Object getAllUserSettings(@PathVariable String userId) {
-//		Optional<SignupFormBean> user = signupRepository.findById(userId);
-//		if (user != null) {
-//			return user.getUserSettings();
-//		} else {
-//			return "User not found.";
-//		}
-	
+	public PomodoraController(SignupRepository signupRepository) {
+		this.signupRepository = signupRepository;
 
 	}
-	
-	
+
+	@RequestMapping(value = "", method = RequestMethod.GET)
+	public List<SignupFormBean> getAllUsers() {
+		// LOG.info("Getting all users.");
+		return signupRepository.findAll();
+	}
+
+	@RequestMapping(value = "/{userId}", method = RequestMethod.GET)
+	public Optional<SignupFormBean> getUser(@PathVariable String userId) {
+		// LOG.info("Getting user with ID: {}.", userId);
+		return signupRepository.findById(userId);
+	}
+
+	@CrossOrigin(origins = "http://localhost:8080")
+	@RequestMapping(value = "/create", method = RequestMethod.POST)
+	public SignupFormBean addNewUsers(@RequestBody SignupFormBean user) {
+		// LOG.info("Saving user.");
+
+		return signupRepository.save(user);
+	}
+}
