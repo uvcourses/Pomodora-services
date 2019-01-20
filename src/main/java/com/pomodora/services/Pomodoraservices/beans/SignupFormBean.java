@@ -1,4 +1,4 @@
-package com.pomodora.services.Pomodoraservices.signup.beans;
+package com.pomodora.services.Pomodoraservices.beans;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
